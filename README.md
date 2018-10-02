@@ -9,13 +9,13 @@ Make sure you already have [asdf](https://github.com/asdf-vm/asdf#setup) install
 
 ```bash
 # Download asdf-vars from Github
-curl -OL https://raw.githubusercontent.com/excid3/asdf-vars/bin/asdf-vars > $ASDF_DIR/bin
+curl https://raw.githubusercontent.com/excid3/asdf-vars/master/bin/asdf-vars > $ASDF_DIR/bin/asdf-vars
 
 # Make it executable
 chmod +x $ASDF_DIR/bin/asdf-vars
 
 # Insert it into the exec code
-sed -i '/#!/usr/bin/env bash/a eval "$(asdf-vars)"' $ASDF_DIR/bin/private/asdf-exec
+sed -i '\/#!\/usr\/bin\/env bash/a eval "$(asdf-vars)"' $ASDF_DIR/bin/private/asdf-exec
 ```
 
 # Usage
