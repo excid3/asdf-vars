@@ -40,8 +40,7 @@ find-vars-files() {
     echo "${ASDF_DIR}/vars"
   fi
 
-  traverse-vars-files "$ASDF_DIR" ||
-  [ "$ASDF_DIR" = "$PWD" ] || traverse-vars-files "$PWD"
+  traverse-vars-files "$PWD"
 }
 
 sanitize-vars() {
