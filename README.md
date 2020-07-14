@@ -8,14 +8,7 @@ This is basically a port of the [rbenv-vars plugin](https://github.com/rbenv/rbe
 Make sure you already have [asdf](https://github.com/asdf-vm/asdf#setup) installed before following these steps.
 
 ```bash
-# Download asdf-vars from Github
-curl https://raw.githubusercontent.com/excid3/asdf-vars/master/bin/asdf-vars > $ASDF_DIR/bin/asdf-vars
-
-# Make it executable
-chmod +x $ASDF_DIR/bin/asdf-vars
-
-# Insert it into the exec code
-sed -i '\/#!\/usr\/bin\/env bash/a eval "$(asdf-vars)"' $ASDF_DIR/bin/private/asdf-exec
+asdf plugin add vars https://github.com/excid3/asdf-vars
 ```
 
 # Usage
@@ -47,4 +40,4 @@ directories of the current directory will be set. Variables from the
 
 # License
 
-© 2018 Chris Oliver. Released under the MIT license. See LICENSE for details.
+© 2018-2020 Chris Oliver. Released under the MIT license. See LICENSE for details.
