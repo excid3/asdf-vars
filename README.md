@@ -11,6 +11,13 @@ Make sure you already have [asdf](https://github.com/asdf-vm/asdf#setup) install
 asdf plugin add vars https://github.com/excid3/asdf-vars
 ```
 
+Add the following to `~/.asdf/lib/commands/command-exec.bash` before it executes the shim.
+
+```bash
+eval "$($ASDF_DIR/bin/asdf vars)"
+with_shim_executable "$shim_name" exec_shim || exit $?
+```
+
 # Usage
 
 Define environment variables in an `.asdf-vars` file in your project,
