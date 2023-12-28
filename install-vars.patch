@@ -1,0 +1,10 @@
+--- command-exec.bash.orig	2023-12-28 15:14:19.245286719 +0100
++++ command-exec.bash	2023-12-28 15:20:08.976160253 +0100
+@@ -28,6 +28,7 @@
+     exec "$executable_path" "${shim_args[@]}"
+   }
+ 
++  eval "$($ASDF_DIR/bin/asdf vars)"
+   with_shim_executable "$shim_name" exec_shim || exit $?
+ }
+ 
