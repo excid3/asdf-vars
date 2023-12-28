@@ -18,6 +18,12 @@ eval "$($ASDF_DIR/bin/asdf vars)"
 with_shim_executable "$shim_name" exec_shim || exit $?
 ```
 
+This can also be done by using the provided patchfile:
+
+```bash
+patch -u ~/.asdf/lib/commands/command-exec.bash install-vars.patch
+```
+
 # Usage
 
 Define environment variables in an `.asdf-vars` file in your project,
